@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ashley-kissinger-portfolio-site/static/css/main.b65b7f14.css",
+    "main.js": "/ashley-kissinger-portfolio-site/static/js/main.46bd2e95.js",
+    "index.html": "/ashley-kissinger-portfolio-site/index.html",
+    "main.b65b7f14.css.map": "/ashley-kissinger-portfolio-site/static/css/main.b65b7f14.css.map",
+    "main.46bd2e95.js.map": "/ashley-kissinger-portfolio-site/static/js/main.46bd2e95.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b65b7f14.css",
+    "static/js/main.46bd2e95.js"
+  ]
+}
