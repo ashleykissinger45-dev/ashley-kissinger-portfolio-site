@@ -1,0 +1,71 @@
+.impact-metrics {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.95);
+  padding: 120px 24px;
+}
+
+.impact-metrics h2 {
+  color: rgba(255, 255, 255, 0.98);
+  margin-bottom: 64px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.metric-item {
+  text-align: center;
+  padding: 48px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.metric-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.metric-value {
+  font-size: clamp(64px, 8vw, 96px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.98);
+}
+
+.metric-label {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .metric-item {
+    padding: 32px 16px;
+  }
+  
+  .metric-value {
+    font-size: 48px;
+  }
+  
+  .metric-label {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --charcoal: #1A1A1A;
+  --light-gray: #F5F5F5;
+  --medium-gray: #666666;
+  --accent: #0066CC;
+  --navy: #1E40AF;
+  --deep-blue: #1E3A8A;
+  --bright-blue: #3B82F6;
+  --slate: #334155;
+  --shadow: #00000015;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #000000;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.app-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+section {
+  padding: 120px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 20px;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 0.95;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1;
+  margin-bottom: 48px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.98);
+}
+
+h3 {
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.98);
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+  display: inline-block;
+  padding: 18px 48px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0;
+  box-shadow: 0 0 0 0.5px rgba(255, 120, 100, 0.4),
+              0 0 0 1px rgba(255, 200, 180, 0.35),
+              0 0 0 1.5px rgba(180, 220, 255, 0.3),
+              0 4px 16px rgba(0, 0, 0, 0.1),
+              0 0 25px rgba(255, 135, 112, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.08em;
+  font-family: 'Space Grotesk', sans-serif;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.92);
+  text-align: center;
+  padding: 40px 24px;
+  margin-top: 120px;
+  border-top: 0;
+  box-shadow: 0 -1px 0 rgba(200, 255, 220, 0.4),
+              0 -1px 0 rgba(255, 180, 200, 0.35),
+              0 -1px 0 rgba(180, 220, 255, 0.3);
+}
+
+.footer p {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+.section-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--light-gray);
+  margin: 80px 0;
+}

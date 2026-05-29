@@ -1,0 +1,502 @@
+.contact {
+  background: transparent;
+  padding-left: clamp(24px, 6vw, 80px);
+  padding-right: clamp(24px, 6vw, 80px);
+}
+
+/* ── Two-column grid ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+  margin-top: 48px;
+}
+
+/* ══════════════════════════════
+   LEFT PANEL
+══════════════════════════════ */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: clamp(20px, 3vw, 44px);
+}
+
+.contact-left h2 {
+  margin: 0;
+}
+
+.contact-tagline {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Channel links ── */
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: clamp(12px, 2vw, 22px) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  text-decoration: none;
+  transition: all 0.22s ease;
+  cursor: pointer;
+}
+
+.channel-card--btn {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  text-align: left;
+  font-family: inherit;
+}
+
+.email-copy-btn {
+  display: inline-block;
+  margin-left: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 120, 100, 0.85);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.email-copy-btn:hover {
+  color: rgba(255, 120, 100, 1);
+}
+
+.channel-card:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.channel-card:hover {
+  transform: translateX(4px);
+}
+
+.channel-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 120, 100, 0.1);
+  border: 1px solid rgba(255, 120, 100, 0.2);
+  color: rgba(255, 120, 100, 0.85);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0;
+  transition: all 0.22s ease;
+}
+
+.channel-card:hover .channel-icon {
+  background: rgba(255, 120, 100, 0.18);
+  border-color: rgba(255, 120, 100, 0.4);
+}
+
+.channel-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.channel-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.channel-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.90);
+  transition: color 0.2s ease;
+}
+
+.channel-card:hover .channel-name { color: rgba(255, 255, 255, 1); }
+.channel-card:hover .channel-sub  { color: rgba(255, 255, 255, 0.88); }
+
+.channel-arrow {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.45);
+  flex-shrink: 0;
+  transition: all 0.22s ease;
+}
+
+.channel-card:hover .channel-arrow {
+  color: rgba(255, 120, 100, 0.8);
+  transform: translate(2px, -2px);
+}
+
+/* ── Left availability line ── */
+.contact-avail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avail-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.90);
+}
+
+/* ══════════════════════════════
+   RIGHT PANEL — glass form card
+══════════════════════════════ */
+.contact-right {
+  position: relative;
+}
+
+.contact-form-card {
+  background: rgba(30, 30, 32, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: none;
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(26px, 3.2vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.97);
+  margin: 0;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.form-card-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.form-card-avail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 7px 12px;
+  align-self: flex-start;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 120, 100, 0.35);
+  border-radius: 100px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.form-avail-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 120, 100, 0.9);
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(255, 120, 100, 0.5);
+}
+
+/* ── Form ── */
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-field label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.90);
+}
+
+.label-opt {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 10px;
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 12px 15px;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.92);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.6;
+}
+
+/* ── Custom Select ── */
+.custom-select {
+  position: relative;
+}
+
+.custom-select-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.custom-select-trigger:focus { outline: none; }
+
+.custom-select.is-open .custom-select-trigger {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.cs-placeholder { color: rgba(255, 255, 255, 0.48); }
+.cs-value       { color: rgba(255, 255, 255, 0.92); }
+
+.cs-arrow {
+  color: rgba(255, 255, 255, 0.62);
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.custom-select.is-open .cs-arrow {
+  transform: rotate(180deg);
+  color: rgba(255, 120, 100, 0.7);
+}
+
+.custom-select-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: rgba(18, 18, 22, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 100;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+.cs-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.cs-option:last-child { border-bottom: none; }
+
+.cs-option:hover {
+  background: rgba(255, 120, 100, 0.15);
+  color: rgba(255, 255, 255, 0.95);
+  padding-left: 20px;
+}
+
+.cs-option.is-selected {
+  color: rgba(255, 120, 100, 0.9);
+  background: rgba(255, 120, 100, 0.17);
+}
+
+.cs-check {
+  font-size: 12px;
+  color: rgba(255, 120, 100, 0.75);
+}
+
+/* ── Errors ── */
+.form-error {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  color: rgba(255, 120, 100, 0.8);
+  margin: 0;
+}
+
+/* ── Submit button ── */
+.submit-btn {
+  width: 100%;
+  margin-top: 4px;
+  padding: 15px 28px;
+  background: rgba(180, 60, 40, 0.28);
+  border: 1px solid rgba(255, 120, 100, 0.65);
+  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: rgba(180, 60, 40, 0.42);
+  border-color: rgba(255, 120, 100, 0.85);
+  transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Success state ── */
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 32px;
+  background: rgba(255, 160, 208, 0.07);
+  border: 1px solid rgba(255, 160, 208, 0.2);
+  border-radius: 16px;
+}
+
+.success-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 160, 208, 0.15);
+  border: 1px solid rgba(255, 160, 208, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: rgba(255, 160, 208, 0.9);
+}
+
+.form-success h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.form-success p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.90);
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-left {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form-card {
+    padding: 28px 22px 32px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
