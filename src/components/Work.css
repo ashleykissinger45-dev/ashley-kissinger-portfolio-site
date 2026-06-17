@@ -14,7 +14,7 @@
   letter-spacing: -0.025em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 40px;
+  margin-bottom: 56px;
   display: flex;
   align-items: baseline;
   gap: 14px;
@@ -39,10 +39,10 @@
 .section-intro {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.8;
   color: rgba(255, 255, 255, 0.62);
   margin-top: -24px;
-  margin-bottom: 36px;
+  margin-bottom: 48px;
   max-width: 640px;
 }
 
@@ -53,7 +53,7 @@
 .work-bento {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 28px;
 }
 
 /* Shared card base */
@@ -72,6 +72,7 @@
   grid-column: 1 / -1;
   padding: 36px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.22);
+  position: relative;
 }
 
 .work-item--hero:hover {
@@ -82,12 +83,15 @@
 
 .work-hero-layout {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 32px;
 }
 
 .work-hero-body {
   flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .work-hero-stat {
@@ -95,31 +99,77 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 22px 28px;
-  background: rgba(255, 120, 100, 0.08);
-  border-radius: 14px;
-  min-width: 120px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, rgba(255, 120, 100, 0.15), rgba(255, 120, 100, 0.08));
+  border: 1px solid rgba(255, 120, 100, 0.25);
+  border-radius: 16px;
+  min-width: 130px;
+  align-self: flex-start;
+  margin-top: 0;
+  box-shadow: 0 8px 24px rgba(255, 120, 100, 0.15), 0 0 60px rgba(255, 120, 100, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.work-hero-stat::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 120, 100, 0.15) 0%, transparent 70%);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.work-hero-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 120, 100, 0.25), 0 0 80px rgba(255, 120, 100, 0.15);
+  border-color: rgba(255, 120, 100, 0.35);
+}
+
+.work-hero-stat::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(255, 120, 100, 0.6), transparent);
+  z-index: 2;
 }
 
 .work-stat-num {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 900;
   letter-spacing: -0.03em;
-  color: rgba(255, 120, 100, 0.9);
+  color: rgba(255, 255, 255, 0.98);
   line-height: 1;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(255, 120, 100, 0.3);
 }
 
 .work-stat-label {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
-  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 10px;
   line-height: 1.5;
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Secondary cards ── */
@@ -139,8 +189,8 @@
 /* Background watermark */
 .card-bg-num {
   position: absolute;
-  bottom: -16px;
-  right: 12px;
+  bottom: 16px;
+  right: 16px;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 100px;
   font-weight: 900;
@@ -148,6 +198,7 @@
   line-height: 1;
   letter-spacing: -0.05em;
   pointer-events: none;
+  z-index: 0;
   user-select: none;
 }
 
@@ -921,5 +972,127 @@
 
   .learning-card {
     padding: 22px 18px;
+  }
+}
+
+/* ══════════════════════════════
+   EVENT PHOTOS SECTION
+══════════════════════════════ */
+
+.event-photos-section {
+  margin-top: 24px;
+}
+
+.photos-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(255, 120, 100, 0.12), rgba(255, 120, 100, 0.06));
+  border: 1px solid rgba(255, 120, 100, 0.25);
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 120, 100, 0.15);
+}
+
+.photos-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.photos-toggle:hover::before {
+  left: 100%;
+}
+
+.photos-toggle:hover {
+  background: linear-gradient(135deg, rgba(255, 120, 100, 0.18), rgba(255, 120, 100, 0.10));
+  border-color: rgba(255, 120, 100, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 120, 100, 0.25);
+}
+
+.photos-toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 120, 100, 0.2);
+}
+
+.toggle-icon {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.photos-toggle:hover .toggle-icon {
+  transform: scale(1.2);
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.event-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.event-photo:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 120, 100, 0.15);
+  border-color: rgba(255, 120, 100, 0.3);
+}
+
+@media (max-width: 768px) {
+  .photos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .photos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .event-photo {
+    height: 250px;
   }
 }

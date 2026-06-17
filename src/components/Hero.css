@@ -18,7 +18,7 @@
   border: 0.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 100px;
   padding: 8px 20px;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.90);
@@ -58,7 +58,7 @@
   font-size: clamp(72px, 12vw, 140px);
   font-weight: 900;
   letter-spacing: -0.03em;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   line-height: 0.95;
   color: rgba(255, 255, 255, 0.98);
   text-transform: uppercase;
@@ -80,7 +80,7 @@
 .hero-tagline {
   font-size: clamp(20px, 2.8vw, 28px);
   color: rgba(255, 255, 255, 0.98);
-  margin-bottom: 48px;
+  margin-bottom: 64px;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.4;

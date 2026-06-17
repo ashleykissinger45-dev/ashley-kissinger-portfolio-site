@@ -22,8 +22,7 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <img src="/portfolio-site/initials.png" alt="Ashley Kissinger" className="signature-logo" />
-        </Link>
+<img src="/initials.png" alt="Ashley Kissinger" className="signature-logo" />        </Link>
 
         <button 
           className="nav-toggle" 

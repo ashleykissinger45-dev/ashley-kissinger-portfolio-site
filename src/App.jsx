@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -11,16 +11,19 @@ import ContactPage from './pages/ContactPage';
 function AppContent() {
   const location = useLocation();
   const isHomePage = location.pathname === '/' || location.pathname === '/portfolio-site' || location.pathname === '/portfolio-site/';
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   
   const backgroundStyle = {
-    backgroundImage: `url(${process.env.PUBLIC_URL}/sitebackground.png)`,
+    backgroundImage: `url(/sitebackground.png)`,
     backgroundSize: 'cover',
-    backgroundPosition: '30% center',
+    backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
     filter: 'saturate(0.88) brightness(1.35) contrast(1.16)'
   };
-
+  
   const overlayStyle = {
     backgroundColor: isHomePage ? 'rgba(0, 0, 0, 0.15)' : 'rgba(0, 0, 0, 0.5)',
     transition: 'background-color 0.7s ease'
@@ -41,7 +44,7 @@ function AppContent() {
         </Routes>
         
         <footer className="footer">
-          <p>Built with React • 2024</p>
+          <p>Ashley Kissinger · 2026</p>
         </footer>
       </div>
     </>
@@ -50,7 +53,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router basename="/portfolio-site">
+    <Router basename="/">
       <AppContent />
     </Router>
   );

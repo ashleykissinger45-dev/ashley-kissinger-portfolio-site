@@ -5,8 +5,8 @@
 .skill-description {
   background: transparent;
   color: rgba(255, 255, 255, 0.85);
-  padding: 16px 4px 4px;
-  margin-top: 8px;
+  padding: 24px 4px 8px;
+  margin-top: 12px;
   grid-column: 1 / -1;
   border: none;
   animation: expandDown 0.3s ease;
@@ -14,7 +14,7 @@
 
 .skill-description p {
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
   font-weight: 500;
@@ -73,8 +73,8 @@
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 48px;
-  margin-top: 40px;
+  gap: 48px 56px;
+  margin-top: 48px;
 }
 
 .skill-category-label {

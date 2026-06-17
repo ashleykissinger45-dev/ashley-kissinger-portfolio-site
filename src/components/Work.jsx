@@ -36,13 +36,14 @@ const flipCards = [
   },
   {
     label: 'Validation',
-    back: 'Interviewed 5 practicing PMs to identify real pain points, then built a functional coded prototype and incorporated feedback through iteration.'
+    back: 'Consulted with an industry professional in software to identify real pain points and user needs, then developed a working concept prototype and refined the approach based on feedback.'
   }
 ];
 
 function Work() {
   const [flipped, setFlipped] = useState({});
   const [openCourse, setOpenCourse] = useState(null);
+  const [photosExpanded, setPhotosExpanded] = useState(false);
 
   const toggle = (i) => setFlipped(prev => ({ ...prev, [i]: !prev[i] }));
   const flippedCount = Object.values(flipped).filter(Boolean).length;
@@ -65,6 +66,28 @@ function Work() {
                   <span className="work-tag">Event Coordination</span>
                   <span className="work-tag">Stakeholder Management</span>
                   <span className="work-tag">Community Outreach</span>
+                </div>
+                
+                <div className="event-photos-section">
+                  <button 
+                    className="photos-toggle" 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setPhotosExpanded(!photosExpanded);
+                    }}
+                  >
+                    {photosExpanded ? 'Hide' : 'View'} Event Photos
+                    <span className="toggle-icon">{photosExpanded ? '−' : '+'}</span>
+                  </button>
+                  
+                  {photosExpanded && (
+                    <div className="photos-grid">
+                      <img src="/event1.jpg" alt="AI Vibe Coding Workshop" className="event-photo" />
+                      <img src="/event2.jpg" alt="AI Vibe Coding Workshop" className="event-photo" />
+                      <img src="/event3.jpg" alt="AI Vibe Coding Workshop" className="event-photo" />
+                      <img src="/event4.jpg" alt="AI Vibe Coding Workshop" className="event-photo" />
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="work-hero-stat">
@@ -202,7 +225,7 @@ function Work() {
               <span className="learning-badge learning-badge--green">Active</span>
             </div>
             <ul className="learning-details learning-details--2col">
-              <li>Paired with a professional PM — who is transitioning into President of the PMI Arizona Chapter — for structured mentorship</li>
+              <li>Paired with a professional PM, who is transitioning into President of the PMI Arizona Chapter, for structured mentorship</li>
               <li>Learning stakeholder leadership, program governance, and how seasoned PMs navigate complex organizations</li>
               <li>Weekly 1:1 sessions focused on career strategy, certification prep, and real-world PM practice</li>
             </ul>

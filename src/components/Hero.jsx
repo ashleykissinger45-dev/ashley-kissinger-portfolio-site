@@ -35,7 +35,7 @@ function Hero() {
         <div className="currently-strip">
           <span className="currently-label">Currently</span>
           <span className="currently-items">
-            <span>Open to full-time PM roles</span>
+            <span>Open to full-time PM & AI roles</span>
             <span className="currently-dot">·</span>
             <span>GCU, B.S.</span>
             <span className="currently-dot">·</span>
@@ -61,7 +61,7 @@ function Hero() {
               className="hero-video"
               playsInline
             >
-              <source src={`${process.env.PUBLIC_URL}/intro-video.mp4`} type="video/mp4" />
+              <source src="/intro-video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="video-overlay">

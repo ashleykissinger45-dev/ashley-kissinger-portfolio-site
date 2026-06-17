@@ -28,7 +28,7 @@ function Certifications() {
           {showCertificate && (
             <div className="certificate-display">
               <img 
-                src="/portfolio-site/capm-certificate.png" 
+                src="/capm-certificate.png" 
                 alt="CAPM Certificate - Ashley Kissinger" 
                 className="certificate-image"
               />

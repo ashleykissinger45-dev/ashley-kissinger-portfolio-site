@@ -14,7 +14,7 @@ function About() {
         <div className="profile-card">
           <div className="profile-photo-wrap">
             <img
-              src={`${process.env.PUBLIC_URL}/profilepic.png`}
+              src="/profilepic.png"
               alt="Ashley Kissinger"
               className="profile-photo"
             />
@@ -29,7 +29,7 @@ function About() {
           <div className="glance-list">
             <div className="glance-item">
               <span className="glance-key">Seeking</span>
-              <span className="glance-val">Full-time PM / Coordinator</span>
+              <span className="glance-val">Full-time PM & AI Roles</span>
             </div>
             <div className="glance-item">
               <span className="glance-key">Location</span>
@@ -45,15 +45,23 @@ function About() {
         {/* RIGHT: main content */}
         <div className="about-main">
           <h2>About Me</h2>
-          <p className="about-lead">
-            CAPM-certified Project Coordinator with a track record of keeping complex projects on time, cross-functional teams aligned, and stakeholders informed. I care about the work behind the work — the communication, the planning, and the follow-through that most people don't see.
-          </p>
-
-          <div className="about-card">
-            <span className="card-label">What I'm Looking For</span>
-            <p className="card-text">
-              I'm drawn to teams where projects are complex, communication matters, and no two days look the same. Ideally a company where I can grow into a senior PM role and contribute from day one — not just coordinate meetings, but help shape how work gets done.
-            </p>
+          
+          <div className="about-paragraphs">
+            <div className="about-paragraph-card">
+              <p>Hi, I'm Ashley Kissinger. I'm a CAPM-certified Business Administration graduate.</p>
+            </div>
+            
+            <div className="about-paragraph-card">
+              <p>I recently coordinated an AI Coding Workshop for GCU students, managing timelines, logistics, and team alignment.</p>
+            </div>
+            
+            <div className="about-paragraph-card">
+              <p>Growing up with two software engineer parents gave me early exposure to technology, and my business studies provided the operational foundation to bridge technical and business needs.</p>
+            </div>
+            
+            <div className="about-paragraph-card">
+              <p>I'm early in my career with much to learn, but what I bring is curiosity, strong organizational skills, and ownership of the details that drive project success.</p>
+            </div>
           </div>
         </div>
 
@@ -75,7 +83,7 @@ function About() {
           {aiExpanded && (
             <div className="ai-expanded">
               <p>My view is that AI is only as powerful as the person using it. We need people who are willing to learn and use it. Those who don't will fall behind because the world doesn't slow down.</p>
-              <p>What stood out most was seeing students be curious about it—that curiosity is what actually makes AI useful.</p>
+              <p>What stood out most was seeing students be curious about it. That curiosity is what actually makes AI useful.</p>
               <p>The real question isn't whether we should use AI, but what we're trying to solve with it. Used well, it helps you think faster, explore ideas, and get unstuck. Used poorly, it replaces thinking.</p>
               <p>In project management, I see it the same way: it's not about replacing work, but focusing on what actually matters.</p>
             </div>
