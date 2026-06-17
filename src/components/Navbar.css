@@ -137,7 +137,7 @@
 .nav-social-link {
   display: flex;
   align-items: center;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   transition: color 0.2s ease;
 }
 

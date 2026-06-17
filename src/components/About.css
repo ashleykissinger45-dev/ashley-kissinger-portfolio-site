@@ -314,7 +314,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .glance-val {
@@ -418,7 +418,7 @@
 }
 
 .cert-divider {
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .cert-arrow {
@@ -482,7 +482,7 @@
 .ai-info {
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .ai-intro {
@@ -554,7 +554,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 10px;
 }
 
@@ -714,7 +714,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 5px;
 }
 
@@ -759,7 +759,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: 12px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.85);
   padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
