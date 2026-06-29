@@ -11,14 +11,16 @@
 }
 
 .currently-strip {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   background: rgba(255, 255, 255, 0.07);
   border: 0.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 100px;
   padding: 8px 20px;
   margin: 0 auto 64px auto;
+  width: fit-content;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.90);
@@ -84,13 +86,15 @@
 .hero-tagline {
   font-size: clamp(20px, 2.8vw, 28px);
   color: rgba(255, 255, 255, 0.98);
-  margin-bottom: 64px;
+  margin: 0 auto 64px auto;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.4;
   text-transform: uppercase;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8), 0 4px 40px rgba(0, 0, 0, 0.6);
   min-height: 1.4em;
+  width: 100%;
+  text-align: center;
 }
 
 .cursor {
