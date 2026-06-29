@@ -43,7 +43,6 @@ const flipCards = [
 function Work() {
   const [flipped, setFlipped] = useState({});
   const [openCourse, setOpenCourse] = useState(null);
-  const [photosExpanded, setPhotosExpanded] = useState(false);
 
   const toggle = (i) => setFlipped(prev => ({ ...prev, [i]: !prev[i] }));
   const flippedCount = Object.values(flipped).filter(Boolean).length;
@@ -66,28 +65,6 @@ function Work() {
                   <span className="work-tag">Event Coordination</span>
                   <span className="work-tag">Stakeholder Management</span>
                   <span className="work-tag">Community Outreach</span>
-                </div>
-                
-                <div className="event-photos-section">
-                  <button 
-                    className="photos-toggle" 
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setPhotosExpanded(!photosExpanded);
-                    }}
-                  >
-                    {photosExpanded ? 'Hide' : 'View'} Event Photos
-                    <span className="toggle-icon">{photosExpanded ? '−' : '+'}</span>
-                  </button>
-                  
-                  {photosExpanded && (
-                    <div className="photos-grid">
-                      <img src="/event1.jpg" alt="AI Vibe Coding Workshop" className="event-photo" />
-                      <img src="/event2.jpg" alt="AI Vibe Coding Workshop" className="event-photo" />
-                      <img src="/event3.jpg" alt="AI Vibe Coding Workshop" className="event-photo" />
-                      <img src="/event4.jpg" alt="AI Vibe Coding Workshop" className="event-photo" />
-                    </div>
-                  )}
                 </div>
               </div>
               <div className="work-hero-stat">
